@@ -43,6 +43,8 @@ lib.registerMenu({
     FPSOptions(selected)
 end)
 
+local isScalerActive = false
+local currentScale = 0.0
 local optionActions = { -- don't judge me.
     function(checked)
         SetInstancePriorityHint(checked and 4 or 0)
@@ -86,8 +88,6 @@ local optionActions = { -- don't judge me.
 
 
 
-local isScalerActive = false
-local currentScale = 0.0
 function LODScaler()
     if not isScalerActive then -- funky ways to prevent multiple calls :P
         CreateThread(function()
