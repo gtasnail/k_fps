@@ -35,7 +35,6 @@ lib.registerMenu({
         lib.setMenuOptions('fpsMenu', savedOptions)
     end,
     onSideScroll = function(selected, scrollIndex, args)
-        print(selected, scrollIndex, args)
         selectTimeCycle(scrollIndex)
     end,
     options = savedOptions
